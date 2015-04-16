@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class BusinessEntity
+    class Modulo : BusinessEntity
     {
-        public int ID { get; set; }
-
+        String Descripcion { get; set; }
     }
 }
