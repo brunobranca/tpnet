@@ -8,6 +8,6 @@ namespace Business
 {
     class Especialidad
     {
-        string Descripcion { get; set; }
+        String Descripcion { get; set; }
     }
 }

@@ -10,10 +10,10 @@ namespace Business
     {
         int IDPersona { get; set; }
         string Nombre {get; set;}
-        string Apellido { get; set; }
-        string Direccion { get; set; }
-        string Email { get; set; }
-        string Telefono { get; set; }
+        String Apellido { get; set; }
+        String Direccion { get; set; }
+        String Email { get; set; }
+        String Telefono { get; set; }
         DateTime FechaNac { get; set; }
         int Legajo { get; set; }
         int TipoPersona { get; set; }
