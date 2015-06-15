@@ -8,7 +8,7 @@ namespace Business
 {
     class Plan
     {
-        String Descripcion { get; set; }
+        string Descripcion { get; set; }
         int IDEspecialidad { get; set; }
     }
 }
