@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business
+namespace Decorator
 {
-    class Especialidad: BusinessEntity
+    class Program
     {
-        string Descripcion { get; set; }
+     
     }
 }
