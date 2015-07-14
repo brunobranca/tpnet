@@ -8,38 +8,81 @@ using Data.Database;
 
 namespace UI.Consola
 {
-    public class Usuarios
+    public class Usuarios : Menu
     {
         UsuarioLogic UsuarioNegocio { get; set; }
+        public Usuarios() {
+            UsuarioNegocio = new UsuarioLogic();
+        }
+        
         public void Menu()
         {
-            Class1 c = new Class1();
-            c.prueba();
-            int opc;
-            Console.WriteLine("1-Listado General");
-            Console.WriteLine("2-Consulta");
-            Console.WriteLine("3-Agregar");
-            Console.WriteLine("4-Modificar");
-            Console.WriteLine("5-Eliminar");
-            Console.WriteLine("6-Salir");
-            opc = Console.Read();
-            Console.Write(opc);
-            Console.ReadKey();
+            int opc = 0;
+            MostrarMenu();
+
+            opc = int.Parse(Console.ReadLine());
+            while (opc != 0)
+            {
+                switch (opc)
+                {
+                    case 1:
+                        ListadoGeneral();
+                        break;
+                    case 2:
+                        Consultar();
+                        break;
+                    case 3:
+                        Agregar();
+                        break;
+                    case 4:
+                        Modificar();
+                        break;
+                    case 5:
+                        Eliminar();
+                        break;
+                    case 6:
+                        break;
+                    default:
+                        opc = 0;
+                        break;
+                }
+                Console.Clear();
+                MostrarMenu();
+                opc = int.Parse(Console.ReadLine());
+            }
             
+            Console.ReadKey();  
         }
         private void ListadoGeneral()
         { }
         private void Consultar()
         { }
         private void Agregar()
-        { }
+        {
+            Console.Clear();
+            string  usuario = IngresarDato("Usuario: ");
+
+            Console.WriteLine("Nombre: ");
+            string nombreUsuario = Console.ReadLine();
+
+            Console.WriteLine("Apellido: ");
+            string apellidoUsuario = Console.ReadLine();
+
+            Console.WriteLine("Email: ");
+            string emailUsuario = Console.ReadLine();
+
+            Console.WriteLine("Clave: ");
+            string claveUsuario = Console.ReadLine();
+
+            UsuarioNegocio.CrearUsuario(usuario, nombreUsuario, apellidoUsuario, emailUsuario, claveUsuario);
+        
+        }
         private void Modificar()
         { }
         private void Eliminar()
         { }
         private void MostrarDatos()
         { }
-
     }
 
 }

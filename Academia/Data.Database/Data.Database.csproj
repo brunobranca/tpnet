@@ -40,7 +40,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DBO.cs" />
+    <Compile Include="DBOEspecialidad.cs" />
+    <Compile Include="DBOUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.Entity.csproj">
+      <Project>{682d4a3d-4da8-4f6c-9d9a-1c6cd500fb16}</Project>
+      <Name>Business.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
