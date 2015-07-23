@@ -17,6 +17,10 @@ namespace UI.Consola
         
         public void Menu()
         {
+
+            UsuarioNegocio.devolverUsuario();
+
+
             int opc = 0;
             MostrarMenu();
 
@@ -74,7 +78,6 @@ namespace UI.Consola
             Console.WriteLine("Clave: ");
             string claveUsuario = Console.ReadLine();
 
-            UsuarioNegocio.CrearUsuario(usuario, nombreUsuario, apellidoUsuario, emailUsuario, claveUsuario);
         
         }
         private void Modificar()

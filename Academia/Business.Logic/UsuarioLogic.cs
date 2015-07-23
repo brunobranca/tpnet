@@ -4,23 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business;
+using Data.Database;
+using System.Data;
+
 
 namespace Business.Logic
 {
     public class UsuarioLogic : BusinessLogic
     {
 
-        DBOUsuario dboUsuario { get; set; }
-
-        public UsuarioLogic()
+        public void devolverUsuario()
         {
-            dboUsuario = new DBOUsuario();
+            using (var ctx = new AcademiaEntities())
+            {
+                try
+                {
+                    
+                    Console.WriteLine((ctx.especialidades.First<Data.Database.especialidade>()).desc_especialidad);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                }
+
         }
 
-        public void CrearUsuario(string usuario, string nombreUsuario, string apellidoUsuario, string emailUsuario, string claveUsuario)
-        {
-            Usuario nuevoUsuario = new Business.Usuario(usuario, nombreUsuario, apellidoUsuario, emailUsuario, claveUsuario, false);
-            dboUsuario.guardar(nuevoUsuario);
-        }
+
     }
 }

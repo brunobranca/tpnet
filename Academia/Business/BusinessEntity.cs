@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class BusinessEntity
+    public class BusinessEntity
     {
         public int ID { get; set; }
 
