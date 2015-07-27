@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class ModuloUsuario : BusinessEntity
+    public class ModuloUsuario : BusinessEntity
     {
         int IDMoodulo { get; set; }
         int IDUsuario { get; set; }

@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class Modulo : BusinessEntity
+    public class Modulo : BusinessEntity
     {
-        string Descripcion { get; set; }
+      public   string Descripcion { get; set; }
+       
     }
 }
