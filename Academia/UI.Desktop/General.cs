@@ -10,7 +10,8 @@ namespace UI.Desktop
     {
         public enum TipoOperacion
         {
-            Alta = 0
+            Alta = 0,
+            Modificacion = 1
         }
 
     }

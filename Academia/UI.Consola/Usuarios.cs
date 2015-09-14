@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Business.Logic;
+using Business.Entity.Logic;
 using Data.Database;
 
 namespace UI.Consola

@@ -7,7 +7,7 @@
     <ProjectGuid>{72C4FB99-5E78-47F2-B986-25EF370A041A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Business.Logic</RootNamespace>
+    <RootNamespace>Business.Entity.Logic</RootNamespace>
     <AssemblyName>Business.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

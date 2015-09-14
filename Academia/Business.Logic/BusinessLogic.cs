@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Business.Logic
+namespace Business.Entity.Logic
 {
     public class BusinessLogic
     {

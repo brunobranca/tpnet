@@ -7,11 +7,11 @@ using Data.Database;
 using System.Text.RegularExpressions;
 
 
-namespace Business.Logic
+namespace Business.Entity.Logic
 {
     public class ModuloLogic
     {
-        public void Add(Business.Modulo Modulo)
+        public void Add(Business.Entity.Modulo Modulo)
         {
             using (AcademiaEntities context = new AcademiaEntities())
             {
@@ -40,7 +40,7 @@ namespace Business.Logic
             }
         }
             
-       public void Update (Business.Modulo Modulo)
+       public void Update (Business.Entity.Modulo Modulo)
         {
            using (AcademiaEntities context = new AcademiaEntities())
            {
@@ -63,11 +63,11 @@ namespace Business.Logic
                
            }
        }
-           private modulo FindModulo(AcademiaEntities c , Business.Modulo mod)
+           private modulo FindModulo(AcademiaEntities c , Business.Entity.Modulo mod)
            {
                return c.modulos.First(m => m.id_modulo == mod.ID);
            }
-        public void Delete (Business.Modulo Modulo)
+        public void Delete (Business.Entity.Modulo Modulo)
            {
             using (AcademiaEntities context = new AcademiaEntities())
             {

@@ -4,44 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data.Database;
+using Business.Entity;
 
-namespace Business.Logic
+namespace Business.Entity.Logic
 {
     public class EspecialidadesLogic
     {
-        public void Add(Business.Especialidad Especialidad)
+        public void Add(Especialidad Especialidad)
         {
             using (AcademiaEntities context = new AcademiaEntities())
             {
-                especialidade especialidad;
-                try{
-                    especialidad = new especialidade();
-                    especialidad.desc_especialidad = Especialidad.Descripcion;
-
-                    context.especialidades.Add(especialidad);
-                    context.SaveChanges();
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                finally 
-                {
-                    especialidad = null;
-                }
-            }
-        }
-
-        public void Update(Business.Especialidad especialidad) 
-        {
-            using (AcademiaEntities context = new AcademiaEntities())
-            {
-                    especialidade oEspecialidad;
+                especialidade dbEspecialidad;
                 try
                 {
-                    oEspecialidad = FindEspecialidad(context, especialidad);
-                    oEspecialidad.desc_especialidad = especialidad.Descripcion;
+                    dbEspecialidad = new especialidade();
+                    dbEspecialidad.desc_especialidad = Especialidad.Descripcion;
+
+                    context.especialidades.Add(dbEspecialidad);
                     context.SaveChanges();
                 }
                 catch (Exception ex)
@@ -50,20 +29,21 @@ namespace Business.Logic
                 }
                 finally
                 {
-                    oEspecialidad = null;
+                    dbEspecialidad = null;
                 }
             }
         }
 
-        public void Delete(Business.Especialidad especialidad)
+        public void Delete(Especialidad especialidad)
         {
             using (AcademiaEntities context = new AcademiaEntities())
             {
-                especialidade oEspecialidad;
+                especialidade dbEspecialidad;
                 try
                 {
-                    oEspecialidad = FindEspecialidad(context, especialidad);
-                    context.especialidades.Remove(oEspecialidad);
+                    dbEspecialidad = FindEspecialidad(context, especialidad);
+                    context.especialidades.Remove(dbEspecialidad);
+                    context.SaveChanges();
                 }
                 catch (Exception ex)
                 {
@@ -71,14 +51,57 @@ namespace Business.Logic
                 }
                 finally
                 {
-                    oEspecialidad = null;
+                    dbEspecialidad = null;
                 }
             }
         }
 
-        private especialidade FindEspecialidad(AcademiaEntities context, Business.Especialidad esp)
+        public void Update(Especialidad especialidad)
         {
+            using (AcademiaEntities context = new AcademiaEntities())
+            {
+                especialidade dbEspecialidad;
 
+                try
+                {
+                    dbEspecialidad = FindEspecialidad(context, especialidad);
+                    dbEspecialidad.desc_especialidad = especialidad.Descripcion;
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    dbEspecialidad = null;
+                }
+            }
+        }
+
+        public IList<Especialidad> getList()
+        {
+            IList<Especialidad> lista = new List<Especialidad>();
+
+            using (AcademiaEntities context = new AcademiaEntities())
+            {
+                IList<especialidade> listaEspecialidades = context.especialidades.ToList();
+
+                foreach(especialidade esp in listaEspecialidades) 
+                {
+                    Especialidad especialidad = new Especialidad();
+                    especialidad.Descripcion = esp.desc_especialidad;
+                    especialidad.ID = esp.id_especialidad;
+
+                    lista.Add(especialidad);
+                }
+            }
+
+            return lista;
+        }
+
+        private especialidade FindEspecialidad(AcademiaEntities context, Especialidad esp)
+        {
             return context.especialidades.First(e => e.id_especialidad == esp.ID);
         }
     }

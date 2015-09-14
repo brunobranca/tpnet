@@ -31,15 +31,16 @@ namespace UI.Desktop
             string desc = txtDescripcion.Text;
             if(Operacion == General.TipoOperacion.Alta)
             {
-                Business.Modulo modulo = new Business.Modulo();
+                Business.Entity.Modulo modulo = new Business.Entity.Modulo();
                 modulo.Descripcion = desc;
-                Business.Logic.ModuloLogic modlogic = new Business.Logic.ModuloLogic();
+                Business.Entity.Logic.ModuloLogic modlogic = new Business.Entity.Logic.ModuloLogic();
                 try
                 {
                     modlogic.Add(modulo);
                 }
                 catch(Exception ex)
                 {
+                    Console.WriteLine(ex.Message + " - " + ex.StackTrace.ToString());
                     MessageBox.Show("error");
                 }
                 this.Hide();

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Business;
+using Business.Entity;
 using Data.Database;
 using System.Data;
 
 
-namespace Business.Logic
+namespace Business.Entity.Logic
 {
     public class UsuarioLogic : BusinessLogic
     {

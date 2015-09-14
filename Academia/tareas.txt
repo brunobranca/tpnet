@@ -1,0 +1,11 @@
+bruno
+plan > materia / especialidad 
+
+andrea
+comision > curso / alumno_inscripcion
+
+juani
+persona > (usuario) docente / alumno
+
+pendiente
+modulo > modulo_usuario

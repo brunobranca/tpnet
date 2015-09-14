@@ -7,54 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Entity;
+using Business.Entity.Logic;
 
 namespace UI.Desktop
 {
     public partial class frmEspecialidad : Form
     {
+        private Especialidad oEspecialidad;
+
         public frmEspecialidad()
         {
             InitializeComponent();
         }
 
-        public General.TipoOperacion Operacion { get; set; }
+        public frmEspecialidad(Especialidad especialidad)
+        {
+            InitializeComponent();
+            txtNombre.Text = especialidad.Descripcion;
+            this.oEspecialidad = especialidad;
+        }
 
-        public bool Cancelado { get; set; }
+        public General.TipoOperacion Operacion { get; set; }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             AceptarOperacion();
         }
 
-
-
         private void AceptarOperacion()
         {
-            Business.Logic.EspecialidadesLogic oEspLogic = new Business.Logic.EspecialidadesLogic();
-            Business.Especialidad oEspecialidad = new Business.Especialidad();
+            EspecialidadesLogic Logic = new EspecialidadesLogic();
 
             try
             {
-                oEspecialidad.Descripcion = txtNombre.Text.Trim();
-
                 if (Operacion == General.TipoOperacion.Alta)
                 {
-                    oEspLogic.Add(oEspecialidad);
-                    MessageBox.Show("Especialidad Agregada!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Especialidad oEspecialidad = new Especialidad();
+                    oEspecialidad.Descripcion = txtNombre.Text.Trim();
+                    
+                    Logic.Add(oEspecialidad);
+                    ShowMessage("Especialidad Agregada!", MessageBoxIcon.Information);
+                }
+                else if (Operacion == General.TipoOperacion.Modificacion)
+                {
+                    this.oEspecialidad.Descripcion = txtNombre.Text.Trim();
+                    Logic.Update(this.oEspecialidad);
+                    ShowMessage("Especialidad Modificada!", MessageBoxIcon.Information);
                 }
 
-                Cancelado = false;
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowMessage(ex.Message, MessageBoxIcon.Error);
             }
             finally
             {
-                oEspecialidad = null;
-                oEspLogic = null;
+                Logic = null;
             }
+        }
+
+        private void ShowMessage(string message, MessageBoxIcon icon)
+        {
+            MessageBox.Show(message, this.Text, MessageBoxButtons.OK, icon);
         }
 
     }
