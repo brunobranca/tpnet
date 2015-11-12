@@ -4,6 +4,7 @@ plan > materia / especialidad
 andrea
 comision > curso / alumno_inscripcion 
 Nota 1 (11/11/15) - Hice el ABM de Comisión, el tema es q necesita si o si el ID de un Plan (porque en la bd figura como FK) asi q se necesita eso !
+Nota 2(12/11/15) - Voy a hacer las ventanas q le corresponden a Juan tambien, pero el codigo queda para el :)
 
 juani
 persona > (usuario) docente / alumno

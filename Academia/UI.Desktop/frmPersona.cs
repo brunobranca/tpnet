@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace UI.Desktop
 {
-    public partial class Form1 : Form
+    public partial class frmPersona : Form
     {
-        public Form1()
+        public frmPersona()
         {
             InitializeComponent();
         }
+
+        private void frmPersona_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
