@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Entity
 {
-    class Curso : BusinessEntity
+    public class Curso : BusinessEntity
     {
         int AnioCalendario { get; set; }
         int Cupo { get; set; }

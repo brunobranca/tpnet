@@ -23,6 +23,11 @@ namespace UI.Desktop
             FillGrid();
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevaEspecialidad();
+        }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Especialidad especialidad = PickEspecialidad();
@@ -30,15 +35,9 @@ namespace UI.Desktop
             FillGrid();
         }
 
-        private Especialidad PickEspecialidad()
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            Especialidad especialidad = (Especialidad)dgvEspecialidades.CurrentRow.DataBoundItem;
-            return especialidad;
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            NuevaEspecialidad();
+            EditarEspecialidad();
         }
 
         private void NuevaEspecialidad()
@@ -47,9 +46,15 @@ namespace UI.Desktop
             FillGrid();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void FillGrid()
         {
-            EditarEspecialidad();
+            dgvEspecialidades.DataSource = Logic.getList();
+        }
+
+        private Especialidad PickEspecialidad()
+        {
+            Especialidad especialidad = (Especialidad)dgvEspecialidades.CurrentRow.DataBoundItem;
+            return especialidad;
         }
 
         private void ShowFrmDialog(General.TipoOperacion operacion, Especialidad especialidad)
@@ -78,9 +83,6 @@ namespace UI.Desktop
             FillGrid();
         }
 
-        private void FillGrid()
-        {
-            dgvEspecialidades.DataSource = Logic.getList();
-        }
+        
     }
 }

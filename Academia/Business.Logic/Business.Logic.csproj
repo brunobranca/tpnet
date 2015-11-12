@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic.cs" />
+    <Compile Include="ComisionesLogic.cs" />
     <Compile Include="EspecialidadesLogic.cs" />
     <Compile Include="ModuloLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

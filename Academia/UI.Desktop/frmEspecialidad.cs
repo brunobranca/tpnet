@@ -53,7 +53,7 @@ namespace UI.Desktop
                 {
                     this.oEspecialidad.Descripcion = txtNombre.Text.Trim();
                     Logic.Update(this.oEspecialidad);
-                    ShowMessage("Especialidad Modificada!", MessageBoxIcon.Information);
+                    ShowMessage("¡Especialidad Modificada!", MessageBoxIcon.Information);
                 }
 
                 this.Hide();

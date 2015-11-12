@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Business.Entity
 {
-    class Comision : BusinessEntity
+    public class Comision : BusinessEntity
     {
-        int AnioEspecialidad { get; set; }
-        int IDPlan { get; set; }
-        string Descripcion { get; set; }
+        public int AnioEspecialidad { get; set; }
+        public int IDPlan { get; set; }
+        public string Descripcion { get; set; }
     }
 }

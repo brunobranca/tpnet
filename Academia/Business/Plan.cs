@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Business.Entity
 {
 
-    class Plan: BusinessEntity
+    public class Plan: BusinessEntity
     {
         string Descripcion { get; set; }
         int IDEspecialidad { get; set; }

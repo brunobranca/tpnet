@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class frmEspecialidades
+    partial class frmComisiones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvEspecialidades = new System.Windows.Forms.DataGridView();
+            this.dgvComisiones = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEspecialidades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComisiones)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvEspecialidades);
+            this.groupBox1.Controls.Add(this.dgvComisiones);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(541, 248);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Especialidades";
+            this.groupBox1.Text = "Comisiones";
             // 
-            // dgvEspecialidades
+            // dgvComisiones
             // 
-            this.dgvEspecialidades.AllowUserToOrderColumns = true;
-            this.dgvEspecialidades.AutoGenerateColumns = false;
-            this.dgvEspecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEspecialidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn});
-            this.dgvEspecialidades.DataSource = this.especialidadBindingSource;
-            this.dgvEspecialidades.Location = new System.Drawing.Point(15, 19);
-            this.dgvEspecialidades.MultiSelect = false;
-            this.dgvEspecialidades.Name = "dgvEspecialidades";
-            this.dgvEspecialidades.ReadOnly = true;
-            this.dgvEspecialidades.Size = new System.Drawing.Size(438, 219);
-            this.dgvEspecialidades.TabIndex = 3;
+            this.dgvComisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComisiones.Location = new System.Drawing.Point(6, 19);
+            this.dgvComisiones.Name = "dgvComisiones";
+            this.dgvComisiones.Size = new System.Drawing.Size(447, 223);
+            this.dgvComisiones.TabIndex = 3;
             // 
             // btnEliminar
             // 
@@ -101,35 +88,16 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // especialidadBindingSource
-            // 
-            this.especialidadBindingSource.DataSource = typeof(Business.Entity.Especialidad);
-            // 
-            // frmEspecialidades
+            // frmComisiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 263);
+            this.ClientSize = new System.Drawing.Size(561, 272);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmEspecialidades";
-            this.Text = "Especialidades";
+            this.Name = "frmComisiones";
+            this.Text = "Comisiones";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEspecialidades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComisiones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,9 +108,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DataGridView dgvEspecialidades;
-        private System.Windows.Forms.BindingSource especialidadBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvComisiones;
     }
 }

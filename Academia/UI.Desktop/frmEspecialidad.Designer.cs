@@ -53,11 +53,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 314);
+            this.ClientSize = new System.Drawing.Size(447, 238);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtNombre);
             this.Name = "frmEspecialidad";
-            this.Text = "frmEspecialidad";
+            this.Text = "Especialidad";
             this.ResumeLayout(false);
             this.PerformLayout();
 
