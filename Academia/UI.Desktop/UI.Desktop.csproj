@@ -56,6 +56,18 @@
     <Compile Include="frmComisiones.Designer.cs">
       <DependentUpon>frmComisiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComisiones.resx">
       <DependentUpon>frmComisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEspecialidad.resx">
       <DependentUpon>frmEspecialidad.cs</DependentUpon>

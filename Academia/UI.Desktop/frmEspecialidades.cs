@@ -48,7 +48,7 @@ namespace UI.Desktop
 
         private void FillGrid()
         {
-            dgvEspecialidades.DataSource = Logic.getList();
+            dgvEspecialidades.DataSource = Logic.GetList();
         }
 
         private Especialidad PickEspecialidad()

@@ -15,8 +15,8 @@ namespace UI.Desktop
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmComisiones());
+            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.Run(new frmCursos());
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Business.Entity
 {
     public class Curso : BusinessEntity
     {
-        int AnioCalendario { get; set; }
-        int Cupo { get; set; }
-        string Descripcion { get; set; }
-        int IDComision { get; set; }
-        int IDMateria { get; set; }
+        public int AnioCalendario { get; set; }
+        public int Cupo { get; set; }
+        public string Descripcion { get; set; }
+        public int IDComision { get; set; }
+        public int IDMateria { get; set; }
     }
 }

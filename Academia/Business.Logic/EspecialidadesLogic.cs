@@ -79,7 +79,7 @@ namespace Business.Entity.Logic
             }
         }
 
-        public IList<Especialidad> getList()
+        public IList<Especialidad> GetList()
         {
             IList<Especialidad> lista = new List<Especialidad>();
 

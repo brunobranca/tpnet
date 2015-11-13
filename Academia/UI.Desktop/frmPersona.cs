@@ -16,12 +16,5 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
-
-        private void frmPersona_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
